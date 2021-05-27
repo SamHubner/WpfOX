@@ -21,15 +21,18 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-
-        <Button x:Name="Position1" Height="60" Width="120" Grid.Column="1" Grid.Row="1" Click="Position1_Click">X</Button>
-        <Button x:Name="Position2" Height="60" Width="120" Grid.Column="2" Grid.Row="1" Click="Position2_Click">X</Button>
-        <Button x:Name="Position3" Height="60" Width="120" Grid.Column="3" Grid.Row="1" Click="Position3_Click">X</Button>
-        <Button x:Name="Position4" Height="60" Width="120" Grid.Column="1" Grid.Row="2" Click="Position4_Click">X</Button>
-        <Button x:Name="Position5" Height="60" Width="120" Grid.Column="2" Grid.Row="2" Click="Position5_Click">X</Button>
-        <Button x:Name="Position6" Height="60" Width="120" Grid.Column="3" Grid.Row="2" Click="Position6_Click">X</Button>
-        <Button x:Name="Position7" Height="60" Width="120" Grid.Column="1" Grid.Row="3" Click="Position7_Click">X</Button>
-        <Button x:Name="Position8" Height="60" Width="120" Grid.Column="2" Grid.Row="3" Click="Position8_Click">X</Button>
-        <Button x:Name="Position9" Height="60" Width="120" Grid.Column="3" Grid.Row="3" Click="Position9_Click">X</Button>
+        <TextBox Grid.Row="0" Grid.Column="4" x:Name="Turn"  TextChanged="Turn_TextChanged">Turn</TextBox>
+        <Button x:Name="Position1" Height="60" Width="120" Grid.Column="1" Grid.Row="1" Click="Position1_Click"> </Button>
+        <Button x:Name="Position2" Height="60" Width="120" Grid.Column="2" Grid.Row="1" Click="Position2_Click"> </Button>
+        <Button x:Name="Position3" Height="60" Width="120" Grid.Column="3" Grid.Row="1" Click="Position3_Click"> </Button>
+        <Button x:Name="Position4" Height="60" Width="120" Grid.Column="1" Grid.Row="2" Click="Position4_Click"> </Button>
+        <Button x:Name="Position5" Height="60" Width="120" Grid.Column="2" Grid.Row="2" Click="Position5_Click"> </Button>
+        <Button x:Name="Position6" Height="60" Width="120" Grid.Column="3" Grid.Row="2" Click="Position6_Click"> </Button>
+        <Button x:Name="Position7" Height="60" Width="120" Grid.Column="1" Grid.Row="3" Click="Position7_Click"> </Button>
+        <Button x:Name="Position8" Height="60" Width="120" Grid.Column="2" Grid.Row="3" Click="Position8_Click"> </Button>
+        <Button x:Name="Position9" Height="60" Width="120" Grid.Column="3" Grid.Row="3" Click="Position9_Click"> </Button>
+        <Button x:Name="Position10" Height="60" Width="120" Grid.Column="0" Grid.Row="4" Click="Position10_Click">Restart</Button>
+        <Button x:Name="Position11" Height="60" Width="120" Grid.Column="2" Grid.Row="4" Click="Position11_Click">Start</Button>
+        <Button x:Name="Position12" Height="60" Width="120" Grid.Column="5" Grid.Row="4" Click="Position12_Click">Save</Button>
     </Grid>
 </Window>
