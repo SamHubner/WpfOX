@@ -125,7 +125,7 @@ namespace WpfOX
 
         private void Position11_Click(object sender, RoutedEventArgs e)
         {
-
+            bool started = true;
         }
 
         private void Position12_Click(object sender, RoutedEventArgs e)
