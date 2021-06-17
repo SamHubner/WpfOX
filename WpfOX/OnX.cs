@@ -19,11 +19,17 @@ namespace WpfOX
             board = new Board();
             turn = 1;
 
-            player1 = new Player();
-            player2 = new Player();
+            player1 = new HumanPlayer();
+            player2 = new HumanPlayer();
 
             players[0] = player1;
             players[1] = player2;
+        }
+
+
+        public void move()
+        {
+            players[turn].move();
         }
 
         public bool addCounter(int pos)

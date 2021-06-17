@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace WpfOX
 {
-    class HumanPlayer
+    class HumanPlayer : Player
     {
+        public override void move()
+        {
 
+        }
     }
 }

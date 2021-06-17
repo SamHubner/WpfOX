@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 namespace WpfOX
 {
 
-    class Player
+    abstract class Player
     {
-
+        abstract public  void move();
+        
     }
 }
