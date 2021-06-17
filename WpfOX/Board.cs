@@ -16,7 +16,6 @@ namespace WpfOX
             if (pos < 0 || pos > 8) return false;
             if (counter != 1 && counter != 2) return false;
 
-
             if (board[pos] == 0)
             {
                 board[pos] = counter;
