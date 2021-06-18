@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace WpfOX
 {
-    class AIPlayer
+    class AIPlayer : Player
     {
+        public override void move()
+        {
 
+        }
     }
 }

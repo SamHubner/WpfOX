@@ -9,7 +9,6 @@ namespace WpfOX
 
     abstract class Player
     {
-        abstract public  void move();
-        
+        abstract public void move();
     }
 }

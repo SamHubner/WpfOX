@@ -29,5 +29,10 @@ namespace WpfOX
         {
             return board;
         }
+
+        public int checkWin(int pos)
+        { 
+
+        }
     }
 }
