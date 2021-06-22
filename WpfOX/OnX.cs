@@ -11,7 +11,7 @@ namespace WpfOX
         private Board board;
         private Player player1;
         private Player player2;
-        private int turn;
+        public int turn;
 
         Player[] players = new Player[2];
         public OnX()

@@ -22,6 +22,7 @@ namespace WpfOX
     {
         static int count = 1;
         OnX g = new OnX();
+        Board go = new Board();
         public MainWindow()
         {
             InitializeComponent();
@@ -73,6 +74,7 @@ namespace WpfOX
         {
             bool result = g.addCounter(7);
             if (result == true) updateGUI();
+            go.checkWin();
         }
 
         private void Position9_Click(object sender, RoutedEventArgs e)
