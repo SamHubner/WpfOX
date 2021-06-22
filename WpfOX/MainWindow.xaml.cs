@@ -74,12 +74,13 @@ namespace WpfOX
         {
             bool result = g.addCounter(7);
             if (result == true) updateGUI();
-            go.checkWin();
+
         }
 
         private void Position9_Click(object sender, RoutedEventArgs e)
         {
             bool result = g.addCounter(8);
+            
             if (result == true) updateGUI();
         }
 
@@ -100,15 +101,12 @@ namespace WpfOX
             Board b = g.getBoard();
             int[] elementsBoard = b.getBoard();
             //insert turn update here
-
             for (int x = 0; x < elementsBoard.Length; x++)
             {
                 if (elementsBoard[x] == 0) bs[x].Content = " ";
                 if (elementsBoard[x] == 1) bs[x].Content = "O";
                 if (elementsBoard[x] == 2) bs[x].Content = "X";
             }
-            
-
         }
 
         private void Position10_Click(object sender, RoutedEventArgs e)
@@ -136,6 +134,11 @@ namespace WpfOX
         }
 
         private void nextMove()
+        {
+
+        }
+
+        private void Winner_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

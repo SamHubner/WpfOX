@@ -34,6 +34,8 @@ namespace WpfOX
 
         public bool addCounter(int pos)
         {
+            bool OWin = false;
+            bool XWin = false;
             bool added = false;
             added = board.addCounter(pos, turn);
             if (added == true)
@@ -43,6 +45,14 @@ namespace WpfOX
                     turn = 2;
                 }
                 else turn = 1;
+            }
+            if(board.checkWin() == 0)
+            {
+                OWin = true;
+            }
+            if (board.checkWin() == 1)
+            {
+                XWin = true;
             }
             return added; ;
         }
@@ -54,6 +64,10 @@ namespace WpfOX
         public int getTurn()
         {
             return turn;
+        }
+        public void chkWin()
+        {
+            board.checkWin();
         }
 
         

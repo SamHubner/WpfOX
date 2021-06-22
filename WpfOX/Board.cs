@@ -33,7 +33,6 @@ namespace WpfOX
 
         public int checkWin()
         {
-            int b = g.getTurn();
 
             if (board[0] == 2 && board[1] == 2 && board[2] == 2)
             {
@@ -107,6 +106,9 @@ namespace WpfOX
             {
                 return 2;
             }
+            ////work out how to link checkwin and mainwindowxaml
+            ///think its with a new subroutine in xaml
+            ///if not try in OnX
         }
     }
 }
