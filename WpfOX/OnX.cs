@@ -26,16 +26,16 @@ namespace WpfOX
             players[1] = player2;
         }
 
-
         public void move()
         {
             players[turn].move();
         }
 
-        public bool addCounter(int pos)
+        public int addCounter(int pos)
         {
-            bool OWin = false;
-            bool XWin = false;
+            int winStatus = 0;
+            bool Xwin = false;
+            bool Owin = false;
             bool added = false;
             added = board.addCounter(pos, turn);
             if (added == true)
@@ -46,15 +46,16 @@ namespace WpfOX
                 }
                 else turn = 1;
             }
-            if(board.checkWin() == 0)
+            winStatus = board.checkWin(); 
+            if(winStatus == 0)
             {
-                OWin = true;
+                Owin = true;
             }
-            if (board.checkWin() == 1)
+            if (winStatus == 1)
             {
-                XWin = true;
+                Xwin = true;
             }
-            return added; ;
+            return winStatus;
         }
 
         public Board getBoard()
@@ -64,10 +65,6 @@ namespace WpfOX
         public int getTurn()
         {
             return turn;
-        }
-        public void chkWin()
-        {
-            board.checkWin();
         }
 
         

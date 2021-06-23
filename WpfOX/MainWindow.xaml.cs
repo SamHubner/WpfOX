@@ -20,9 +20,8 @@ namespace WpfOX
     /// </summary>
     public partial class MainWindow : Window
     {
-        static int count = 1;
+        static int count = 0;
         OnX g = new OnX();
-        Board go = new Board();
         public MainWindow()
         {
             InitializeComponent();
@@ -30,58 +29,65 @@ namespace WpfOX
 
         private void Position1_Click(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(0);
+            int result = g.addCounter(0);
             if (result == true) updateGUI();
+            count = (count + 1)%2;
         }
 
         private void Position2_Click(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(1);
+            int result = g.addCounter(1);
             if (result == true) updateGUI();
+            count = (count + 1) % 2;
         }
 
         private void Position3_Click(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(2);
+            int result = g.addCounter(2);
             if (result == true) updateGUI();
+            count = (count + 1) % 2;
         }
 
         private void Position4_Click(object sender, RoutedEventArgs e)
         {
             bool result = g.addCounter(3);
             if (result == true) updateGUI();
+            count = (count + 1) % 2;
         }
 
         private void Position5_Click(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(4);
+            int result = g.addCounter(4);
             if (result == true) updateGUI();
+            count = (count + 1) % 2;
         }
 
         private void Position6_Click(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(5);
+            int result = g.addCounter(5);
             if (result == true) updateGUI();
+            count = (count + 1) % 2;
         }
 
         private void Position7_Click(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(6);
+            int result = g.addCounter(6);
             if (result == true) updateGUI();
+            count = (count + 1) % 2;
         }
 
         private void Position8_Click(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(7);
+            int result = g.addCounter(7);
             if (result == true) updateGUI();
-
+            count = (count + 1) % 2;
         }
 
         private void Position9_Click(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(8);
-            
+            int result = g.addCounter(8);
             if (result == true) updateGUI();
+            count = (count + 1) % 2;
         }
 
         private void Turn_TextChanged(object sender, TextChangedEventArgs e)
@@ -100,6 +106,7 @@ namespace WpfOX
             Button[] bs = { Position1, Position2, Position3, Position4, Position5, Position6, Position7, Position8, Position9 };
             Board b = g.getBoard();
             int[] elementsBoard = b.getBoard();
+            Turn.Text = " ";
             //insert turn update here
             for (int x = 0; x < elementsBoard.Length; x++)
             {
@@ -120,6 +127,7 @@ namespace WpfOX
                 if (elementsBoard[x] == 1) elementsBoard[x] = 0;
                 if (elementsBoard[x] == 2) elementsBoard[x] = 0;
             }
+            g.turn = 1;
             updateGUI();
         }
 
@@ -129,11 +137,6 @@ namespace WpfOX
         }
 
         private void Position12_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void nextMove()
         {
 
         }

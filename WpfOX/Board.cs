@@ -8,8 +8,8 @@ namespace WpfOX
 {
     class Board
     {
-        OnX g;
         private int[] board = new int[9];
+        private int [,] winLines = { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 }, { 0, 3, 6 }, { 1, 4, 7 }, { 2, 5, 8 }, { 0, 4, 8 }, { 2, 4, 6 } };
 
         public bool addCounter(int pos, int counter)
         {
@@ -22,7 +22,6 @@ namespace WpfOX
                 board[pos] = counter;
                 added = true;
             }
-
             return added;
         }
 
@@ -33,82 +32,21 @@ namespace WpfOX
 
         public int checkWin()
         {
+            int winStatus = 3;
 
-            if (board[0] == 2 && board[1] == 2 && board[2] == 2)
+            for (int player = 1; player < 3; player = player + 1)
             {
-                return 0;
+                for (int i = 0; i < winLines.Length / 3; i = i + 1)
+                {
+                    if (board[winLines[i, 0]] == player && board[winLines[i, 1]] == player && board[winLines[i, 2]] == player)
+                    {
+                        winStatus = player;
+                        return winStatus;
+                    }
+                    
+                }
             }
-            if (board[3] == 2 && board[4] == 2 && board[5] == 2)
-            {
-                return 0;
-            }
-            if (board[6] == 2 && board[7] == 2 && board[8] == 2)
-            {
-                return 0;
-            }
-            if (board[0] == 2 && board[3] == 2 && board[6] == 2)
-            {
-                return 0;
-            }
-            if (board[1] == 2 && board[4] == 2 && board[7] == 2)
-            {
-                return 0;
-            }
-            if (board[2] == 2 && board[5] == 2 && board[8] == 2)
-            {
-                return 0;
-            }
-            if (board[0] == 2 && board[4] == 2 && board[8] == 2)
-            {
-                return 0;
-            }
-            if (board[2] == 2 && board[4] == 2 && board[6] == 2)
-            {
-                return 0;
-            }
-
-
-
-            if (board[0] == 1 && board[1] == 1 && board[2] == 1)
-            {
-                return 1;
-            }
-            if (board[3] == 1 && board[4] == 1 && board[5] == 1)
-            {
-                return 1;
-            }
-            if (board[6] == 1 && board[7] == 1 && board[8] == 1)
-            {
-                return 1;
-            }
-            if (board[0] == 1 && board[3] == 1 && board[6] == 1)
-            {
-                return 1;
-            }
-            if (board[1] == 1 && board[4] == 1 && board[7] == 1)
-            {
-                return 1;
-            }
-            if (board[2] == 1 && board[5] == 1 && board[8] == 1)
-            {
-                return 1;
-            }
-            if (board[0] == 1 && board[4] == 1 && board[8] == 1)
-            {
-                return 1;
-            }
-            if (board[2] == 1 && board[4] == 1 && board[6] == 1)
-            {
-                return 1;
-            }
-
-            else
-            {
-                return 2;
-            }
-            ////work out how to link checkwin and mainwindowxaml
-            ///think its with a new subroutine in xaml
-            ///if not try in OnX
+            return winStatus;
         }
     }
 }
