@@ -30,63 +30,81 @@ namespace WpfOX
         private void Position1_Click(object sender, RoutedEventArgs e)
         {
             int result = g.addCounter(0);
-            if (result == true) updateGUI();
+            if (result == 1) Winner.Text = "O Wins";
+            if (result == 2) Winner.Text = "X Wins";
+            if (result != 5) updateGUI();
             count = (count + 1)%2;
         }
 
         private void Position2_Click(object sender, RoutedEventArgs e)
         {
             int result = g.addCounter(1);
-            if (result == true) updateGUI();
+            if (result == 1) Winner.Text = "O Wins";
+            if (result == 2) Winner.Text = "X Wins";
+            if (result != 5) updateGUI();
             count = (count + 1) % 2;
         }
 
         private void Position3_Click(object sender, RoutedEventArgs e)
         {
             int result = g.addCounter(2);
-            if (result == true) updateGUI();
+            if (result == 1) Winner.Text = "O Wins";
+            if (result == 2) Winner.Text = "X Wins";
+            if (result != 5) updateGUI();
             count = (count + 1) % 2;
         }
 
         private void Position4_Click(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(3);
-            if (result == true) updateGUI();
+            int result = g.addCounter(3);
+            if (result == 1) Winner.Text = "O Wins";
+            if (result == 2) Winner.Text = "X Wins";
+            if (result != 5) updateGUI();
             count = (count + 1) % 2;
         }
 
         private void Position5_Click(object sender, RoutedEventArgs e)
         {
             int result = g.addCounter(4);
-            if (result == true) updateGUI();
+            if (result == 1) Winner.Text = "O Wins";
+            if (result == 2) Winner.Text = "X Wins";
+            if (result != 5) updateGUI();
             count = (count + 1) % 2;
         }
 
         private void Position6_Click(object sender, RoutedEventArgs e)
         {
             int result = g.addCounter(5);
-            if (result == true) updateGUI();
+            if (result == 1) Winner.Text = "O Wins";
+            if (result == 2) Winner.Text = "X Wins";
+            if (result != 5) updateGUI();
             count = (count + 1) % 2;
         }
 
         private void Position7_Click(object sender, RoutedEventArgs e)
         {
             int result = g.addCounter(6);
-            if (result == true) updateGUI();
+            if (result == 1) Winner.Text = "O Wins";
+            if (result == 2) Winner.Text = "X Wins";
+            if (result != 5) updateGUI();
             count = (count + 1) % 2;
         }
 
         private void Position8_Click(object sender, RoutedEventArgs e)
         {
             int result = g.addCounter(7);
-            if (result == true) updateGUI();
+            if (result == 1) Winner.Text = "O Wins";
+            if (result == 2) Winner.Text = "X Wins";
+            if (result != 5) updateGUI();
             count = (count + 1) % 2;
         }
 
         private void Position9_Click(object sender, RoutedEventArgs e)
         {
             int result = g.addCounter(8);
-            if (result == true) updateGUI();
+            if (result == 1) Winner.Text = "O Wins";
+            if (result == 2) Winner.Text = "X Wins";
+            if (result != 5) updateGUI();
             count = (count + 1) % 2;
         }
 
@@ -107,7 +125,6 @@ namespace WpfOX
             Board b = g.getBoard();
             int[] elementsBoard = b.getBoard();
             Turn.Text = " ";
-            //insert turn update here
             for (int x = 0; x < elementsBoard.Length; x++)
             {
                 if (elementsBoard[x] == 0) bs[x].Content = " ";
@@ -118,7 +135,8 @@ namespace WpfOX
 
         private void Position10_Click(object sender, RoutedEventArgs e)
         {
-            Board b = g.getBoard();
+            Board b = new Board();
+            b = g.getBoard();
             int[] elementsBoard = b.getBoard();
             Button[] bs = { Position1, Position2, Position3, Position4, Position5, Position6, Position7, Position8, Position9 };
             for (int x = 0; x < elementsBoard.Length; x++)
@@ -128,6 +146,8 @@ namespace WpfOX
                 if (elementsBoard[x] == 2) elementsBoard[x] = 0;
             }
             g.turn = 1;
+            Winner.Text = "Winner:";
+            Turn.Text = " ";
             updateGUI();
         }
 
