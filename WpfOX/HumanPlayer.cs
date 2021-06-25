@@ -8,9 +8,14 @@ namespace WpfOX
 {
     class HumanPlayer : Player
     {
-        public override void move()
+
+        public HumanPlayer(Board b) : base(b)
         {
 
+        }
+        public override int move()
+        {
+            return -1;
         }
     }
 }

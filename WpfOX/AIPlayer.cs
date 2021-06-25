@@ -8,12 +8,20 @@ namespace WpfOX
 {
     class AIPlayer : Player
     {
-        public override void move()
+        
+        public AIPlayer(Board b) : base(b)
         {
+     
+            
+        }
 
 
-
-
+        public override int move()
+        {
+            Random rnd = new Random();
+            int pos = rnd.Next(0, 8);
+            b.addCounter(pos, 1);
+            return pos;
         }
     }
 }

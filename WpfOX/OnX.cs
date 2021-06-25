@@ -19,8 +19,8 @@ namespace WpfOX
             board = new Board();
             turn = 1;
 
-            player1 = new HumanPlayer();
-            player2 = new HumanPlayer();
+            player1 = new HumanPlayer(board);
+            player2 = new AIPlayer(board);
 
             players[0] = player1;
             players[1] = player2;

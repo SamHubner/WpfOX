@@ -8,7 +8,15 @@ namespace WpfOX
 {
 
     abstract class Player
+
     {
-        abstract public void move();
+        protected Board b;
+        public Player(Board board)
+        {
+            b = board;
+        }
+        abstract public int move();
+
+       
     }
 }
